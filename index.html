@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   <h2>¿Cómo está el clima hoy?</h2>
+
+  <button id="soleado" onclick="cambiarClima('soleado')">Soleado ☀️</button>
+  <button id="lluvioso" onclick="cambiarClima('lluvioso')">Lluvioso 🌧️</button>
+  <button id="nublado" onclick="cambiarClima('nublado')">Nublado ☁️</button>
+
+
+
+    <div id="mensaje">Selecciona el clima para ver el mensaje.</div>
+
+  <script>
+   function cambiarClima(clima) {
+  const mensaje = document.getElementById("mensaje");
+  const body = document.body;
+
+  switch (clima) {
+    case 'soleado':
+      mensaje.textContent = "¡Es un día brillante y lleno de energía! ☀️";
+      body.style.background = "linear-gradient(to top, #fceabb, #f8b500)";
+      body.style.color = "#333";
+      break;
+    case 'lluvioso':
+      mensaje.textContent = "Perfecto para una taza de té y buena música. 🌧️";
+      body.style.background = "linear-gradient(to top, #a1c4fd, #c2e9fb)";
+      body.style.color = "#333";
+      break;
+    case 'nublado':
+      mensaje.textContent = "Ideal para reflexionar y dejarse llevar por la calma. ☁️";
+      body.style.background = "linear-gradient(to top, #d7d2cc, #304352)";
+      body.style.color = "white";
+      break;
+  }
+}
+
+
+  </script>
+
+</body>
+</html>
